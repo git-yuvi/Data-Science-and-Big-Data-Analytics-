@@ -1,0 +1,12 @@
+data1.s<-scale(data1[-1:-3])
+data1.s
+?dist
+d<-dist(data1.s)
+options(max.print=1000000)
+d
+k1<-kmeans(data1.s,1)
+k1
+k1$cluster
+library(ggplot2)
+library(factoextra)
+fviz_nbclust(data1.s,kmeans,method="wss")
